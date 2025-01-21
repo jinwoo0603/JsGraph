@@ -39,8 +39,12 @@ class Graph {
     }
     size() { return this.graph.size; }
     density() {
-        const V = this.graph.size;
-        
+        let V = this.graph.size;
+        let E = 0;
+        for (const [key, value] of this.graph) {
+            E += value.size;
+        }
+        return E / (V * (V - 1));
     }
     dfs(callback) {}
     bfs(callback) {}
