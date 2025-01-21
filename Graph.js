@@ -29,8 +29,7 @@ class Graph {
     disconnect(from, to) {
         if (this.graph.has(from) && this.graph.has(to)) {
             this.graph.get(from).delete(to);
-        }
-        if (this.graph.has(from)) {
+        } else if (this.graph.has(from)) {
             console.error(`Error: Node ${to} does not exist.`);
         } else if (this.graph.has(to)) {
             console.error(`Error: Node ${from} does not exist.`);
@@ -38,4 +37,12 @@ class Graph {
             console.error('Error: Both Nodes do not exist.');
         }
     }
+    size() { return this.graph.size; }
+    density() {
+        const V = this.graph.size;
+        
+    }
+    dfs(callback) {}
+    bfs(callback) {}
+    shortestPath(from, to) {}
 }
