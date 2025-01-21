@@ -46,7 +46,9 @@ class Graph {
         }
         return E / (V * (V - 1));
     }
-    dfs(callback) {}
-    bfs(callback) {}
+    adjacent(from) { return this.graph.get(from); }
+    dfs(from, callback) {}
+    bfs(from, callback) {}
     shortestPath(from, to) {}
+    everyPath() {}
 }
